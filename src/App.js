@@ -9,11 +9,13 @@ class App extends Component
   {
     super(props);
     this.notas=[];
+    this.state={};
   }
   criarNota(titulo, texto)
   {
     const nota = { titulo, texto };
     this.notas.push(nota);
+    this.setState({notas:this.notas})
   }
 
   render() 
